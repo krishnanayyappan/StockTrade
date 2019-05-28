@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.prady.stocktrade_news">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/StockTrade"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".edit_transaction"></activity>
+        <activity android:name=".history" />
+        <activity android:name=".performance" />
+        <activity android:name=".addWatch" />
+        <activity android:name=".add_transaction" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/StockTrade" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NewsDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Login"
+            android:icon="@mipmap/ic_launcher"
+            android:label="Stock Trade">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Main2Activity"
+            android:label="Stock Track" />
+        <activity
+            android:name=".MarketWatchActivity"
+            android:label="Market Watch" />
+        <activity
+            android:name=".Stock_Details"
+            android:label="Stock Details" />
+        <activity
+            android:name=".PIN"
+            android:label="Setup PIN" />
+        <activity
+            android:name=".auth_pin"
+            android:label="ENTER PIN" />
+        <activity android:name=".account_settings" />
+        <activity
+            android:name=".NotesMainActivity"
+            android:label="Notes" />
+        <activity android:name=".FormAddUpdateActivity" />
+    </application>
+
+</manifest>
